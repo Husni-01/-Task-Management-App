@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  LayoutGrid, 
-  Calendar, 
-  MessageSquare, 
-  BarChart2, 
-  Settings, 
-  LogOut, 
+import {
+  LayoutGrid,
+  Calendar,
+  MessageSquare,
+  BarChart2,
+  Settings,
+  LogOut,
   Users,
   Layers,
   X
@@ -25,7 +25,7 @@ export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen }) 
     <>
       {/* Mobile Backdrop */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden transition-opacity"
           onClick={() => setIsOpen(false)}
         />
@@ -47,12 +47,12 @@ export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen }) 
               </div>
             </div>
             <span className="block text-[9px] font-bold tracking-wider text-slate-800 dark:text-white uppercase mt-1 text-center">
-              OCTOM.
+              OCTOM
             </span>
           </div>
 
           {/* Close button for mobile */}
-          <button 
+          <button
             onClick={() => setIsOpen(false)}
             className="lg:hidden mt-2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-white"
           >
@@ -75,8 +75,8 @@ export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen }) 
                 title={item.label}
                 className={`
                   relative group flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-200
-                  ${isActive 
-                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-indigo-500/35 scale-105' 
+                  ${isActive
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-indigo-500/35 scale-105'
                     : 'text-slate-400 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#1C2130]'
                   }
                 `}
@@ -85,7 +85,7 @@ export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen }) 
                 {item.badge && !isActive && (
                   <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-indigo-500 ring-2 ring-white dark:ring-[#13161F]" />
                 )}
-                
+
                 {/* Floating tooltip on hover */}
                 <span className="absolute left-16 px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-xl z-50">
                   {item.label}
@@ -97,7 +97,7 @@ export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen }) 
 
         {/* Bottom Exit / Settings */}
         <div className="flex flex-col items-center gap-3">
-          <button 
+          <button
             className="flex items-center justify-center w-11 h-11 rounded-xl text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-500/10 transition-colors"
             title="Log Out"
           >
